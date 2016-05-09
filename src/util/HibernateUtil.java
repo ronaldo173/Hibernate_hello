@@ -8,9 +8,21 @@ import org.hibernate.cfg.Configuration;
 
 import entity.PublisherEntity;
 
+/**
+ * It's write to db test.
+ * 
+ * @author Santer
+ *
+ */
 public class HibernateUtil {
 
-	public static void main(String[] args) {
+	/**
+	 * In point to class.
+	 * 
+	 * @param args
+	 *            not expect.
+	 */
+	public static void main(final String[] args) {
 
 		Configuration cf = new Configuration().configure("hibernate.cfg.xml");
 
@@ -24,7 +36,7 @@ public class HibernateUtil {
 			sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 			// cf.buildSessionFactory(sr);
 			session = sf.openSession();
-			PublisherEntity publisherEntity  = new PublisherEntity();
+			PublisherEntity publisherEntity = new PublisherEntity();
 
 			publisherEntity.setId(16); // Primary Key
 			publisherEntity.setName("hibernate");
